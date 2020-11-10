@@ -9,6 +9,8 @@ const ordersController = new OrdersController();
 
 ordersRouter.use(authenticated);
 
+ordersRouter.get('/', ordersController.index);
+
 ordersRouter.post(
   '/',
   celebrate({

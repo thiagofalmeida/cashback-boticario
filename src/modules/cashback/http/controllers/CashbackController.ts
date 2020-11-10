@@ -1,12 +1,12 @@
 import { Request, Response } from 'express';
 
-import ListCashbackAccumulation from '../../services/ListCashbackAccumulation';
+import ListCashbackAccumulationService from '../../services/ListCashbackAccumulationService';
 
 export default class CashbackController {
   public async index(request: Request, response: Response): Promise<Response> {
     const { cpf } = request.query;
 
-    const listCackback = new ListCashbackAccumulation();
+    const listCackback = new ListCashbackAccumulationService();
 
     const credit = await listCackback.execute(String(cpf));
 
