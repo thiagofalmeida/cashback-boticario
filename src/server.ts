@@ -2,7 +2,7 @@ import express from 'express';
 
 import routes from './shared/http/routes';
 
-import './database';
+import './shared/database';
 
 const app = express();
 
