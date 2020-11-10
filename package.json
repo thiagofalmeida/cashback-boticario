@@ -8,6 +8,7 @@
     "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js"
   },
   "dependencies": {
+    "celebrate": "^13.0.4",
     "express": "^4.17.1",
     "pg": "^8.4.2",
     "typeorm": "^0.2.29"
