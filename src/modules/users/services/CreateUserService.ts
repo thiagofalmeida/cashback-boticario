@@ -2,6 +2,7 @@ import { getRepository } from 'typeorm';
 import { hash } from 'bcryptjs';
 
 import User from '../entities/User';
+import AppError from '../../../shared/errors/AppError';
 
 interface Request {
   name: string;
@@ -19,7 +20,7 @@ class CreateUserService {
     });
 
     if (checkUserExists) {
-      throw new Error('Email or CPF already used!');
+      throw new AppError('Email or CPF already used!');
     }
 
     const hashedPassword = await hash(password, 10);

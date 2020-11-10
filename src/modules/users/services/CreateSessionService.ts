@@ -4,6 +4,7 @@ import { getRepository } from 'typeorm';
 
 import User from '../entities/User';
 import authConfig from '../../../config/auth';
+import AppError from '../../../shared/errors/AppError';
 
 interface Request {
   email: string;
@@ -24,13 +25,13 @@ class CreateSessionService {
     });
 
     if (!user) {
-      throw new Error('These credentials do not match our records');
+      throw new AppError('These credentials do not match our records', 401);
     }
 
     const passwordMatched = await compare(password, user.password);
 
     if (!passwordMatched) {
-      throw new Error('These credentials do not match our records');
+      throw new AppError('These credentials do not match our records', 401);
     }
 
     const { secret, expiresIn } = authConfig.jwt;
