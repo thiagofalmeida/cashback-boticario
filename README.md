@@ -68,7 +68,7 @@ npm dev:server
 ```
 ## Rotas da aplicação
 
-Para facilitar é possível encontrar na aplicação um arquivo json chamado `app_routes_insomnia.json` [aqui]().
+Para facilitar é possível encontrar na aplicação um arquivo json chamado `app_routes_insomnia.json` [aqui](https://github.com/thiagofalmeida/cashback-boticario/blob/main/src/utils/app_routes_insomnia.json).
 Para utilizar ele basta baixar essa aplicação [Insomnia Rest](https://insomnia.rest/download/)  e importar o arquivo nela, feito isso todos os requests estarão configurados.
 
 Aqui está alguns detalhes de cada rota.
