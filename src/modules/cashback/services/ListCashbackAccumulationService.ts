@@ -42,9 +42,6 @@ class ListCashbackAccumulationService {
       `/cashback?cpf=${cpf}`,
     );
 
-    console.info(ordersTotal);
-    console.info(data.body.credit);
-
     const credit = data.body.credit + ordersTotal;
 
     return { cpf, credit };

@@ -8,7 +8,7 @@ export default async (name = 'default'): Promise<Connection> => {
       name,
       database:
         process.env.NODE_ENV === 'test'
-          ? 'cashback_boticario_tests'
+          ? process.env.DB_TEST_NAME
           : defaultOptions.database,
     }),
   );
