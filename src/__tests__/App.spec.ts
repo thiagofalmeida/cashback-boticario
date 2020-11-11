@@ -102,6 +102,26 @@ describe('App', () => {
       password: '123123123',
     });
 
+    await request(app)
+      .post('/orders')
+      .set('Authorization', `Bearer ${session.body.token}`)
+      .send({
+        code: 123,
+        price: 200,
+        date: new Date(),
+        cpf: user.body.cpf,
+      });
+
+    await request(app)
+      .post('/orders')
+      .set('Authorization', `Bearer ${session.body.token}`)
+      .send({
+        code: 123,
+        price: 100,
+        date: new Date(),
+        cpf: user.body.cpf,
+      });
+
     const cashback = await request(app)
       .get('/cashback?cpf=08045698742')
       .set('Authorization', `Bearer ${session.body.token}`);
@@ -127,7 +147,7 @@ describe('App', () => {
     });
 
     const cashback = await request(app)
-      .get('/cashback?cpf=123132132')
+      .get('/cashback?cpf=12313213212')
       .set('Authorization', `Bearer ${session.body.token}`);
 
     expect(cashback.status).toBe(400);
@@ -215,7 +235,7 @@ describe('App', () => {
         code: 123,
         price: 100,
         date: new Date(),
-        cpf: '1231313',
+        cpf: '08024569845',
       });
 
     expect(order.status).toBe(400);
