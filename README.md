@@ -6,6 +6,7 @@ O desafio é criar um sistema para seus revendedores(as) cadastrarem suas compra
 
 - A aplicação foi desenvolvida utilizando NodeJS, com [TypeScript](https://www.typescriptlang.org/).
 - O framework escolhido para utilizar foi o [Express](https://github.com/expressjs/express).
+- Foi utilizado o ORM [TypeORM](https://typeorm.io/#/) para efetuar as ações que envolvem banco de dados, ele foi escolhido principalmente pela integração que ele tem com o TypeScript.
 - Para os desenvolvimento dos testes foi utilizado o framework de testes [Jest](https://github.com/facebook/jest).
 - A autenticação dos usuários na aplicação é feita com JWT utilizando a lib [jsonwebtoken](https://github.com/auth0/node-jsonwebtoken).
 - Para garantir a integridade dos dados enviados nos requests foi utilizado o middleware [Celebrate](https://github.com/arb/celebrate).
