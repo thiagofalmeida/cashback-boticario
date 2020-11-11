@@ -16,7 +16,9 @@ ordersRouter.post(
   celebrate({
     [Segments.BODY]: {
       code: Joi.number().required(),
-      cpf: Joi.string().required(),
+      cpf: Joi.string()
+        .required()
+        .regex(/^\d{3}\d{3}\d{3}\d{2}$/),
       price: Joi.number().precision(2),
       date: Joi.date(),
     },

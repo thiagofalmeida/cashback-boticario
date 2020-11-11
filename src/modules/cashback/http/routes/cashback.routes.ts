@@ -14,7 +14,9 @@ cashbackRouter.get(
   '/',
   celebrate({
     [Segments.QUERY]: {
-      cpf: Joi.string().required(),
+      cpf: Joi.string()
+        .required()
+        .regex(/^\d{3}\d{3}\d{3}\d{2}$/),
     },
   }),
   cashbackController.index,
