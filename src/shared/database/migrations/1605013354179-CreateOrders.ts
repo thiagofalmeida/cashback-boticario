@@ -36,6 +36,16 @@ export default class CreateOrders1605013354179 implements MigrationInterface {
             type: 'timestamp with time zone',
           },
           {
+            name: 'cashback_percentage',
+            type: 'int',
+          },
+          {
+            name: 'cashback_return_value',
+            type: 'decimal',
+            precision: 10,
+            scale: 2,
+          },
+          {
             name: 'created_at',
             type: 'timestamp',
             default: 'now()',

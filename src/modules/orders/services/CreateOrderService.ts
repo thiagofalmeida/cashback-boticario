@@ -3,6 +3,7 @@ import { getRepository } from 'typeorm';
 import Order from '../entities/Order';
 import User from '../../users/entities/User';
 import AppError from '../../../shared/errors/AppError';
+import CalculateCashback from '../utils/CalculateCashback';
 
 interface Request {
   code: number;
@@ -24,12 +25,17 @@ class CreateUserService {
       throw new AppError('User does not exists!');
     }
 
+    const cashback_percentage = CalculateCashback.calculatePercentage(price);
+    const cashback_return_value = CalculateCashback.calculateReturnValue(price);
+
     const order = ordersRepository.create({
       code,
       price,
       date,
       cpf,
       status: cpf === '15350946056' ? 'Aprovado' : 'Em validação',
+      cashback_percentage,
+      cashback_return_value,
     });
 
     await ordersRepository.save(order);

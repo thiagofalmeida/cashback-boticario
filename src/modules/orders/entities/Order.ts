@@ -29,6 +29,12 @@ class Order {
   @Column()
   cpf: string;
 
+  @Column()
+  cashback_percentage: number;
+
+  @Column()
+  cashback_return_value: number;
+
   @ManyToOne(() => User)
   @JoinColumn({ name: 'cpf' })
   user: User;
