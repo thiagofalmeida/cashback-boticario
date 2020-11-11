@@ -2,6 +2,7 @@
   "name": "cashback-boticario",
   "version": "1.0.0",
   "main": "index.js",
+  "author": "Thiago Ferreira de Almeida",
   "license": "MIT",
   "scripts": {
     "dev:server": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules src/server.ts",

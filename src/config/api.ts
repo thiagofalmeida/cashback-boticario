@@ -1,8 +1,8 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'https://mdaqk8ek5j.execute-api.us-east-1.amazonaws.com/v1',
-  headers: { token: 'ZXPURQOARHiMc6Y0flhRC1LVlZQVFRnm' },
+  baseURL: process.env.BOTICARIO_API_URL,
+  headers: { token: process.env.BOTICARIO_API_TOKEN },
 });
 
 export default api;

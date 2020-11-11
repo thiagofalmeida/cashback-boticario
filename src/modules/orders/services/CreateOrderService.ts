@@ -25,8 +25,7 @@ class CreateUserService {
       throw new AppError('User does not exists!');
     }
 
-    const cashback_percentage = CalculateCashback.calculatePercentage(price);
-    const cashback_return_value = CalculateCashback.calculateReturnValue(price);
+    const { percentage, returnValue } = CalculateCashback.calculate(price);
 
     const order = ordersRepository.create({
       code,
@@ -34,8 +33,8 @@ class CreateUserService {
       date,
       cpf,
       status: cpf === '15350946056' ? 'Aprovado' : 'Em validação',
-      cashback_percentage,
-      cashback_return_value,
+      cashback_percentage: percentage,
+      cashback_return_value: returnValue,
     });
 
     await ordersRepository.save(order);
