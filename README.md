@@ -13,6 +13,9 @@ O desafio é criar um sistema para seus revendedores(as) cadastrarem suas compra
 - Para consumir dados da API externa do Boticário foi utilizado o cliente HTTP [Axios](https://github.com/axios/axios).
 - Durante o desenvolvido com o fim de manter o código padronizado foi utilizado as ferramentas [EditorConfig](https://editorconfig.org/), [Eslint](https://eslint.org/) e [Prettier](https://prettier.io/).
 
+A aplicação foi desenvolvida pensando no `DDD (Domain Driven Design)` que são boas práticas a serem utilizadas ao longo do desenvolvimento, onde cada domínio é responsável por uma parte diferente da aplicação.
+Com isso em mente foi separado em três módulos, `users`, `orders` e `cashback`, onde cada módulo tem suas próprias responsabilidades.
+
 # Preparando ambientes
 
 ## Pré-requisitos
