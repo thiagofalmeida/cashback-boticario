@@ -108,7 +108,7 @@ describe('App', () => {
       .send({
         code: 123,
         price: 200,
-        date: new Date(),
+        date: '13/11/2020',
         cpf: user.body.cpf,
       });
 
@@ -118,7 +118,7 @@ describe('App', () => {
       .send({
         code: 123,
         price: 100,
-        date: new Date(),
+        date: '13/11/2020',
         cpf: user.body.cpf,
       });
 
@@ -172,7 +172,7 @@ describe('App', () => {
       .send({
         code: 123,
         price: 100,
-        date: new Date(),
+        date: '13/11/2020',
         cpf: user.body.cpf,
       });
 
@@ -203,7 +203,7 @@ describe('App', () => {
       .send({
         code: 123,
         price: 100,
-        date: new Date(),
+        date: '13/11/2020',
         cpf: user.body.cpf,
       });
 
@@ -234,7 +234,7 @@ describe('App', () => {
       .send({
         code: 123,
         price: 100,
-        date: new Date(),
+        date: '13/11/2020',
         cpf: '08024569845',
       });
 
@@ -267,7 +267,7 @@ describe('App', () => {
       .send({
         code: 123,
         price: 100,
-        date: new Date(),
+        date: '13/11/2020',
         cpf: user.body.cpf,
       });
 
@@ -277,7 +277,7 @@ describe('App', () => {
       .send({
         code: 123,
         price: 100,
-        date: new Date(),
+        date: '13/11/2020',
         cpf: userTwo.body.cpf,
       });
 
